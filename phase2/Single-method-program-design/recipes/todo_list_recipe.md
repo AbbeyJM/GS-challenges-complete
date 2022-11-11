@@ -3,10 +3,10 @@
 ## 1. Describe the Problem
 
 _Put or write the user story here. Add any clarifying notes you might have._
+#As a user
+#So that I can keep track of my tasks
+#I want to check if a text includes the string #TODO.
 
-As a user
-So that I can keep track of my tasks
-I want to check if a text includes the string #TODO.
 
 
 ## 2. Design the Method Signature
@@ -14,42 +14,33 @@ I want to check if a text includes the string #TODO.
 _Include the name of the method, its parameters, return value, and side effects._
 
 ```ruby
-# EXAMPLE
-
-name & method signature -> todo(text)
-parameter -> text: a string
-return value ->  a boolean
-
+todo(text) = name and what it takes
+text: string
+returns true/false
 ```
+
+
 
 ## 3. Create Examples as Tests
 
 _Make a list of examples of what the method will take and return._
 
-```ruby
-# EXAMPLE
-
+``` ruby
 todo("#TODO")
-# => true
+=> true
 
-todo("blabla#TODOblabla")
-# => true
+todo("wash the #TODO car")
+=> true
 
-
-todo("#TODo")
-# => false
+todo("#toDO")
+=> false
 
 todo("")
-# => false
+=> false
 
-todo("hello")
-# => false
-
-todo("#TblaOblaDO")
-# => false
-
-
-
+todo("#TcarOwaDshO")
+=> return false
+```
 
 
 
