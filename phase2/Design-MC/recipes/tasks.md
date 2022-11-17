@@ -29,31 +29,31 @@ I want to see a list of all of the mobile phone numbers in all my diary entries
 
 2. Design the class system
 
-Class Diary
+Class Diary *
 - title, and contents 
-- # all
-- # todolist - calls todo
+-  all
+- todolist - calls todo
 
-Class Todo(task)
-# feeding into diary
-- # add todos
+Class Todo(task) *
+ feeding into diary
+-  add todos
 
-Class text 
-# taking from diary, and feeding into
-- # number(digits) # adds numbers to entries returns nothing
-- recall # pulls numbers from entries, search .include?[0..9]
-# def has_digits?(str)
- # str.count("0-9") > 0
-# end - from stackoverflow
+Class text *
+ taking from diary, and feeding into
+ number(digits) # adds numbers to entries returns nothing
+ recall # pulls numbers from entries, search .include?[0..9]
+ def has_digits?(str)
+ str.count("0-9") > 0
+ end - from stackoverflow
 
-Class entries
-- # add (entry) @contents, @title
-- # count words
+Class entries *
+ #add (entry) @contents, @title
+ count words
 
-Class return
-# pulls on diary (refer to diary_entry.rb)
-- # reading_time 
-- reading_chunk, returns a chunk of text, best entry
+Class return *
+ pulls on diary (refer to diary_entry.rb)
+  reading_time 
+ reading_chunk, returns a chunk of text, best entry
 
 
 3. examples as integration tests # the whole system to it, using parts from other .rbs
@@ -74,8 +74,8 @@ todo.add(task_2)
 todo.todolist # => [task_1, task_2]
 
 diary = Diary.new
-digit_1 = Digit.new("I'm sad")
-digit_2 = Digit.new("I'm happy")
+digit_1 = Digit.new("07900613644")
+digit_2 = Digit.new("07786759211")
 diary.add(digit_1)
 diary.add(digit_2)
 diary.all # => [digit_1, digit_2]
@@ -109,3 +109,37 @@ expect(result) => diary_entry_1
 
 
 4. examples as unit tests # mainly focused on methods from single .rbs
+
+```ruby 
+CLASS DIARY
+ def intilize(diary)
+  @diary
+  @todo
+
+def all # returns all entries 
+  @diary
+
+def todolist(todo)
+  @todo
+end
+
+CLASS TODO
+def initilize
+  @list
+def add(todo)
+  @todolist << @list
+end
+
+CLASS TEXT
+def initialize
+  @numbers
+  
+def add(digit)
+  @diary << @numbers
+
+def recall?(diary)
+def has_digits?(diary)
+ diary.count("0-9") > 0
+
+
+```

@@ -1,0 +1,1 @@
+requrie 'Diary_entry'
